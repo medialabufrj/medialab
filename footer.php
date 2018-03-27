@@ -1,10 +1,12 @@
 		
 		<div style="height:60px;"></div>
 
-		<footer>
-			
-			<div class="grid--lg">
-				
+	<footer>
+		
+		<div class="section-wrapper footer">
+
+			<div class="grid--lg grid--gutters">
+
 				<div class="col">
 					<p><strong>MediaLab.UFRJ</strong></p>
 					<p>
@@ -17,14 +19,29 @@
 						<br><strong>Telefone:</strong> (21) 3873-5053
 					</p>
 				</div>
-				<div class="col">col 2</div>
-				<div class="col">col 3</div>
+				
+				<div class="col">
+					<p class="footer-apoio-title"><strong>Apoio</strong></p>
+					<div class="footer-apoio-images">
+						<a href="#" target="_blank"><img src="<?php echo WP_THEME_URL ?>/img/apoio-ford.svg" width="240"></a>
+						<a href="#" target="_blank"><img src="<?php echo WP_THEME_URL ?>/img/apoio-faperj.svg" width="160"></a>
+						<a href="#" target="_blank"><img src="<?php echo WP_THEME_URL ?>/img/apoio-cnpq.svg" width="120"></a>
+					</div>
+				</div>
+
+				<div class="col">
+					<p>&nbsp;</p>
+					<div class="footer-cc">
+						<p class="source-org copyright">Todo o conteúdo aqui publicado está sob a Licença <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.pt">Creative Commons - Atribuição-Compartilha Igual 3.0 Não Adaptada</a>.</p>
+						<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.pt"><img alt="Licença Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" scale="0"></a></p>
+					</div>
+				</div>
 
 			</div>
 
-		</footer>
-	
-	</div>
+		</div>
+
+	</footer>
 
 	<script>
 		var PATH = "<?php echo WP_SITE_URL ?>";

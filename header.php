@@ -18,14 +18,10 @@
 </head>
 
 <body <?php body_class(); ?>>
-	
-	<div class="the_container">
 
-		<header style="padding-top: 50px;">
+	<header style="padding-top: 50px;">
 
-			<!-- <h1 class="site-title">
-				<a href="<?php echo site_url(); ?>"><?php bloginfo('title'); ?></a>
-			</h1> -->
+		<div class="section-wrapper header">
 
 			<a href="<?php echo site_url(); ?>"><img src="<?php echo WP_THEME_URL ?>/img/medialab-marca.svg" alt="" style="position:absolute;top:40px;" width="128"></a>
 			
@@ -37,5 +33,7 @@
 				<?php wp_list_categories( array('title_li'=>'') ) ?>
 			</nav>
 
-		</header>
+		</div>
+
+	</header>
 
