@@ -24,7 +24,7 @@ Template Name: Home
 			</div>
 			<div class="col">
 				<div class="destaque-info">
-					<h3><a href="<?php echo get_permalink($destaque->ID) ?>"><?php echo $destaque->post_title; ?></a></h3>
+					<h3 class="display"><a href="<?php echo get_permalink($destaque->ID) ?>"><?php echo $destaque->post_title; ?></a></h3>
 					<p><?php echo wp_trim_words(strip_shortcodes($destaque->post_content), 60); ?></p>
 					<p><a href="<?php echo get_permalink($destaque->ID) ?>">Leia mais</a></p>
 				</div>

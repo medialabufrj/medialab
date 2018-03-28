@@ -8,7 +8,7 @@
 			<div class="grid--lg grid--gutters">
 
 				<div class="col">
-					<p><strong>MediaLab.UFRJ</strong></p>
+					<p class="display upper">MediaLab.UFRJ</p>
 					<p>
 						Av. Pasteur, 250 – Urca,
 						<br>Escola de Comunicação da UFRJ, Sala 106
@@ -21,7 +21,7 @@
 				</div>
 				
 				<div class="col">
-					<p class="footer-apoio-title"><strong>Apoio</strong></p>
+					<p class="display upper footer-apoio-title">Apoio</p>
 					<div class="footer-apoio-images">
 						<a href="#" target="_blank"><img src="<?php echo WP_THEME_URL ?>/img/apoio-ford.svg" width="240"></a>
 						<a href="#" target="_blank"><img src="<?php echo WP_THEME_URL ?>/img/apoio-faperj.svg" width="160"></a>
