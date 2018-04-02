@@ -14,9 +14,23 @@
 						<br>Escola de Comunicação da UFRJ, Sala 106
 						<br>Rio de Janeiro - RJ, CEP 22290-240</p>
 					<p>
-						<strong>Coordenação:</strong> Fernanda Bruno
-						<br><strong>E-mail:</strong> <a href="mailto:contato@medialabufrj.net">contato@medialabufrj.net</a>
-						<br><strong>Telefone:</strong> (21) 3873-5053
+						<a href="mailto:contato@medialabufrj.net">contato@medialabufrj.net</a>
+						<br>(21) 3873-5053
+					</p>
+
+					<p>
+						<a href="https://www.facebook.com/UFRJ.MediaLab/" class="footer--social-icons" target="_blank">
+							<img height="16" width="16" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/facebook.svg" />
+						</a>
+
+						<a href="https://twitter.com/medialabufrj" class="footer--social-icons" target="_blank">
+							<img height="16" width="16" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/twitter.svg" />
+						</a>
+
+						<a href="https://www.instagram.com/medialabufrj/" class="footer--social-icons" target="_blank">
+							<img height="16" width="16" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/instagram.svg" />
+						</a>
+
 					</p>
 				</div>
 				
