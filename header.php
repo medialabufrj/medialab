@@ -30,7 +30,19 @@
 			</nav>
 			
 			<nav class="display site-categories">
-				<?php wp_list_categories( array('title_li'=>'') ) ?>
+				<?php if(is_home() || is_page() || is_category() || is_single()): ?>
+					<?php wp_list_categories( array('title_li'=>'') ) ?>
+				<?php else: ?>
+					<li>FILTRAR: </li>
+					<?php
+					$category_ids = get_all_category_ids(); 
+					$args = array( 'orderby' => 'slug', 'parent' => 0 ); 
+					$categories = get_categories( $args );
+					foreach ( $categories as $category ) {
+					$classname = isset($_GET['eixo']) && $_GET['eixo'] == $category->slug ? "current-cat" : "";
+					echo '<li><a class="'.$classname.'" href="?eixo=' . $category->slug . '">' . $category->name . '</a></li>'; }
+					?>
+				<?php endif; ?>
 			</nav>
 
 		</div>

@@ -18,6 +18,24 @@ a:hover {
   text-decoration: underline;
 }
 
+a.btn {
+  border: 1px solid #666;
+  padding: 10px 14px;
+  display: inline-block;
+  //transition: all 0.6s;
+  &:hover {
+    text-decoration: none;
+    border-color: #000;
+    color: #000;
+  }
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid #eee;
+  margin: 40px 0;
+}
+
 .display {
   font-family: 'Rajdhani', sans-serif;
   font-weight: 500;
@@ -50,6 +68,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .posts-pagination {
 
+  font-size: 1.5em;
+
   .nav-links {
 
     text-align: center;
@@ -81,6 +101,9 @@ h1, h2, h3, h4, h5, h6 {
 
 // HEADER
 
+header {
+  border-bottom: 1px solid #eee;
+}
 header .site-menu,
 header .site-categories {
     display: block;
@@ -103,12 +126,20 @@ header .site-categories li {
 
 header .site-menu {
     text-align: right;
+
+    .current-menu-item {
+      text-decoration: underline;
+    }
 }
 
 header .site-categories {
     font-size: 1.5em;
     padding: 60px 0 0;
     text-align: right;
+
+    .current-cat {
+      text-decoration: underline;
+    }
 }
 
 // FOOTER
@@ -155,6 +186,10 @@ footer {
 
 .flickity-viewport {
   transition: height 0.2s;
+}
+
+.flickity-page-dots {
+  bottom: -50px;
 }
 
 /* smaller, dark, rounded square */
@@ -213,3 +248,20 @@ footer {
   }
 }
 
+// EIXOS
+
+.eixos--description {
+  margin: 0 auto 40px;
+  width: 80%;
+  font-size: 1.2em;
+  line-height: 1.2em;
+}
+
+.eixos--projetos-link {
+  text-align: center;
+  margin: 40px 0; 
+}
+
+.filter-title {
+  text-align: center;
+}

@@ -80,4 +80,16 @@ function parse_markdown($my_text){
 	return parse_special($my_text);
 }
 
+// CHANGE QUERIES
+
+add_action( 'pre_get_posts', 'custom_query_vars' );
+function custom_query_vars( $query ) {
+	if ( !is_admin() && $query->is_main_query() ) {
+		if ( isset($_GET['eixo']) ) {
+			$query->set( 'category_name', $_GET['eixo'] );
+		}
+	}
+	return $query;
+}
+
 ?>

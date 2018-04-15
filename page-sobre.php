@@ -9,6 +9,8 @@ Template Name: Sobre
 
 	<?php the_content() ?>
 
+	<hr>
+
 	<h2 class="display upper">Equipe</h2>
 	
 	<div class="sobre-equipe row multi">
@@ -33,6 +35,8 @@ Template Name: Sobre
 ?>
 
 	</div>
+
+	<hr>
 
 	<h2 class="display upper">Apoio</h2>
 

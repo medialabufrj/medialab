@@ -2,15 +2,15 @@
 
     <?php while(have_posts()): the_post(); ?>
 
-        <article class="<?php echo $post_classes; ?> grid">
+        <article class="<?php echo $post_classes; ?> row">
             
-            <div class="col">
+            <div class="row__col_sw_12 row__col_lw_6">
                 <a href="<?php the_permalink(); ?>">
                     <?php the_post_thumbnail('large'); ?>
                 </a>
             </div>
 
-            <div class="col">
+            <div class="row__col_sw_12 row__col_lw_6">
                 <div class="destaque-info">
                     <h3><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h3>
                     <p><?php echo wp_trim_words(strip_shortcodes(get_the_content()), 60); ?></p>
