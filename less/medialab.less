@@ -64,9 +64,17 @@ h1, h2, h3, h4, h5, h6 {
   
 }
 
-// GRID
+// GRID / SHARPS
 
-.col img {
+.row.multi {
+  [class*='row__'] {
+    margin-right: 0;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+}
+
+.row img {
   max-width: 100%;
   height: auto;
 }
@@ -107,6 +115,11 @@ header .site-categories {
 
 footer {
   border-top: 1px solid #eee;
+
+  img {
+    max-width: 100%;
+  }
+
 }
 
 .footer--social-icons {
@@ -172,7 +185,7 @@ footer {
 
 // DESTAQUES
 
-@media (min-width: 48em) {
+@media (min-width: 64em) {
 
   .destaque-info {
     padding-left: 30px;
@@ -188,11 +201,11 @@ footer {
 
 .sobre-equipe--pessoa {
   img {
-    max-width: 256px;
+    max-width: 100%;
   }
   h3 {
     margin: 0;
-    margin-top: 1em;
+    margin-top: 0.5em;
   }
   h4 {
     margin: 0;

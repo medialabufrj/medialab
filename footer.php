@@ -5,9 +5,9 @@
 		
 		<div class="section-wrapper footer">
 
-			<div class="grid--lg grid--gutters">
+			<div class="row">
 
-				<div class="col">
+				<div class="row__col_sw_12 row__col_mw_4">
 					<p class="display upper">MediaLab.UFRJ</p>
 					<p>
 						Av. Pasteur, 250 – Urca,
@@ -34,7 +34,7 @@
 					</p>
 				</div>
 				
-				<div class="col">
+				<div class="row__col_sw_12 row__col_mw_4">
 					<p class="display upper footer-apoio-title">Apoio</p>
 					<div class="footer-apoio-images">
 						<a href="#" target="_blank"><img src="<?php echo WP_THEME_URL ?>/img/apoio-ford.svg" width="240"></a>
@@ -43,7 +43,7 @@
 					</div>
 				</div>
 
-				<div class="col">
+				<div class="row__col_sw_12 row__col_mw_4">
 					<p>&nbsp;</p>
 					<div class="footer-cc">
 						<p class="source-org copyright">Todo o conteúdo aqui publicado está sob a Licença <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.pt">Creative Commons - Atribuição-Compartilha Igual 3.0 Não Adaptada</a>.</p>
