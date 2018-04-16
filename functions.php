@@ -22,6 +22,7 @@ add_image_size( 'square-small', 128, 128, true );
 include 'inc/markdown.php';
 include 'inc/wrapping.php';
 include 'inc/post-types.php';
+include 'inc/posts2posts.php';
 //include 'inc/taxonomies.php';
 
 // ADMIN MENU ORDER
