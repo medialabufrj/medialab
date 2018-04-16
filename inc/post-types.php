@@ -3,7 +3,7 @@
 	add_action( 'init', 'medialab_post_types' );
 	function medialab_post_types() {
 		$types = array(
-			array('Blog Post','Blog Posts','blog'),
+			array('Post','Blog','blog'),
 			array('Evento','Eventos','eventos'),
 			array('Projeto','Projetos','projetos'),
 			array('Publicação','Publicações','publicacoes')

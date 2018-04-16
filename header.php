@@ -33,8 +33,9 @@
 				<?php if(is_home() || is_page() || is_category() || is_single()): ?>
 					<?php wp_list_categories( array('title_li'=>'') ) ?>
 				<?php else: ?>
-					<li>FILTRAR: </li>
+					<!-- <li>FILTRAR: </li> -->
 					<?php
+					$query_object = get_queried_object();
 					$category_ids = get_all_category_ids(); 
 					$args = array( 'orderby' => 'slug', 'parent' => 0 ); 
 					$categories = get_categories( $args );

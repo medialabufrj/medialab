@@ -2,15 +2,15 @@
 <?php if(isset($_GET['eixo'])): ?>
 <?php
 	$eixo = get_category_by_slug($_GET['eixo']);
-	$posttype = get_queried_object();
+	$query_object = get_queried_object();
 	//var_dump( $posttype );
 ?>
 	<div class="filter-title">
-		<h2 class="display upper"><?php echo $wp_query->found_posts; ?>
-			<?php echo $posttype->labels->singular_name; ?>(s) em "<?php echo $eixo->name ?>"
-		</h2>
-		<a class="display upper btn" href="/<?php echo $posttype->name ?>">remover filtro</a>
-
+		
+		<p class="display upper"><?php echo $wp_query->found_posts; ?>
+			<?php echo $query_object->labels->singular_name; ?>(s) em "<?php echo $eixo->name ?>"
+		</p>
+		<!-- <a class="display upper btn" href="/<?php echo $query_object->name ?>">remover filtro</a> -->
 
 	</div>
 
