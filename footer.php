@@ -3,11 +3,11 @@
 
 	<footer>
 		
-		<div class="section-wrapper">
+		<div class="section-wrapper content">
 
 			<div class="columns">
 
-				<div class="column is-4">
+				<div class="column is-4" style="font-size: 16px;">
 					<p class="display upper">MediaLab.UFRJ</p>
 					<p>
 						Av. Pasteur, 250 – Urca,

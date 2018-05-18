@@ -28,9 +28,9 @@
 		</div>
 		
 		<div>
-			<a href="<?php the_permalink(); ?>">
+			<h4><a href="<?php the_permalink(); ?>">
 				<?php the_title(); ?>
-			</a>
+			</a></h4>
 		</div>
 
 	</article>

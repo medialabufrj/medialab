@@ -41,7 +41,9 @@ Template Name: Sobre
 
 	<hr>
 
-	<h2 class="display upper">Apoio</h2>
+	<h2 class="display upper">Parceiros</h2>
+	
+	<div class="sobre-parceiros columns is-multiline">
 
 <?php
 
@@ -49,7 +51,7 @@ Template Name: Sobre
 
 		while ( have_rows('acf_apoio') ) : the_row();
 ?>
-		<div class="sobre-equipe--apoio">
+		<div class="sobre-parceiros--item column is-narrow">
 			<a href="<?php the_sub_field('url'); ?>" target="_blank" title="<?php the_sub_field('nome'); ?>">
 				<img width="128" src="<?php $img = get_sub_field('marca'); echo $img['url'] ?>" alt="<?php the_sub_field('nome'); ?>">
 			</a>
@@ -61,6 +63,8 @@ Template Name: Sobre
 	endif;
 
 ?>
+
+	</div>
 
 <?php endwhile; ?>
 
