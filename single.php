@@ -29,6 +29,8 @@
         wp_reset_postdata();
         endif;
         ?>
+        
+        <div class="spacer"></div>
 
         <?php
         $connected = new WP_Query( array(
@@ -79,6 +81,8 @@
         wp_reset_postdata();
         endif;
         ?>
+        
+        <div class="spacer"></div>
 
         <?php
         $connected = new WP_Query( array(
@@ -128,6 +132,8 @@
         wp_reset_postdata();
         endif;
         ?>
+
+        <div class="spacer"></div>
 
         <?php
         $connected = new WP_Query( array(

@@ -22,6 +22,8 @@
 
             </article>
 
+            <div class="spacer"></div>
+
         <?php endwhile; ?>
 
     </div>
