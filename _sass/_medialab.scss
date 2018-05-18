@@ -1,21 +1,13 @@
 
-
 // BASE
 
-body {
-  font-family: 'Source Sans Pro', sans-serif;
-  color: #444;
-  line-height: 1.5em;
+.display {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 500;
 }
 
-a {
-  color: #666;
-  text-decoration: none;
-}
-
-
-a:hover {
-  text-decoration: underline;
+.spacer {
+  height: 40px;
 }
 
 a.btn {
@@ -34,11 +26,6 @@ hr {
   border: 0;
   border-bottom: 1px solid #eee;
   margin: 40px 0;
-}
-
-.display {
-  font-family: 'Rajdhani', sans-serif;
-  font-weight: 500;
 }
 
 .upper {

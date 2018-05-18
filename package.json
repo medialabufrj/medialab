@@ -1,0 +1,29 @@
+{
+  "name": "medialab-wp-theme",
+  "version": "1.0.0",
+  "description": "wordpress theme for medialab.ufrj",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css-build": "node-sass _sass/main.scss css/main.css",
+    "start": "npm run css-build -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/medialabufrj/medialab.git"
+  },
+  "keywords": [
+    "wordpress",
+    "theme"
+  ],
+  "author": "Marlus Araujo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/medialabufrj/medialab/issues"
+  },
+  "homepage": "https://github.com/medialabufrj/medialab#readme",
+  "devDependencies": {
+    "bulma": "^0.7.1",
+    "node-sass": "^4.9.0"
+  }
+}

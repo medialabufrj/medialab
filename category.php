@@ -1,17 +1,17 @@
 <?php $eixo = get_category(get_query_var('cat')); ?>
 
-<div class="eixos--description">
+<div class="eixos--description content">
 	<p><strong><?php the_field('acf_eixo_title', $eixo) ?></strong></p>
 	<p><?php echo $eixo->description ?></p>
 </div>
 
 <hr>
 
-<section class="eixos--projetos">
+<section class="eixos--projetos content">
 	
 	<h2 class="display upper">Projetos</h2>
 
-	<div class="row multi">
+	<div class="columns is-multiline">
 	
 <?php 
 	$args = array ( 'category' => $eixo->cat_ID, 'posts_per_page' => 6, 'post_type' => 'projetos');
@@ -19,7 +19,7 @@
 	foreach( $myposts as $post ) : 
 		setup_postdata($post);
 ?>
-	<article class="eixos--projeto row__col_sw_12 row__col_mw_4">
+	<article class="eixos--projeto column is-4">
 		
 		<div>
 			<a href="<?php the_permalink(); ?>">

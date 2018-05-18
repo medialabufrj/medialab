@@ -18,11 +18,11 @@ Template Name: Home
 			$destaque = get_sub_field('post');
 ?>
 	<div class="carousel-cell">
-		<div class="row">
-			<div class="row__col_sw_12 row__col_lw_6">
+		<div class="columns">
+			<div class="column is-6">
 				<a href="<?php echo get_permalink($destaque->ID) ?>"><?php echo get_the_post_thumbnail($destaque->ID,'2x'); ?></a>
 			</div>
-			<div class="row__col_sw_12 row__col_lw_6">
+			<div class="column is-6">
 				<div class="destaque-info">
 					<h3 class="display"><a href="<?php echo get_permalink($destaque->ID) ?>"><?php echo $destaque->post_title; ?></a></h3>
 					<p><?php echo wp_trim_words(strip_shortcodes($destaque->post_content), 60); ?></p>
