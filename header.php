@@ -16,7 +16,7 @@
 
 <body <?php body_class(); ?>>
 
-	<header style="padding-top: 50px;">
+	<header style="padding-top: 50px;" class="is-hidden-touch">
 
 		<div class="section-wrapper header">
 
@@ -26,7 +26,7 @@
 				<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
 			</nav>
 			
-			<nav class="display site-categories">
+			<nav class="display site-categories is-hidden-touch">
 				<?php if(is_home() || is_page() || is_category() || is_single()): ?>
 					<?php wp_list_categories( array('title_li'=>'') ) ?>
 				<?php else: ?>
@@ -46,4 +46,20 @@
 		</div>
 
 	</header>
+
+	<nav class="navbar is-transparent is-hidden-desktop">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="<?php echo site_url(); ?>">
+				<img src="<?php echo WP_THEME_URL ?>/img/medialab-marca.svg" style="max-height: 92px;margin-left: 25px;">
+			</a>
+			<div class="navbar-burger burger" data-target="mobile_menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+		<div id="mobile_menu" class="navbar-menu">
+			<div class="navbar-end has-text-centered is-uppercase"></div>
+		</div>
+	</nav>
 
