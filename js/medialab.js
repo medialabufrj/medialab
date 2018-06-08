@@ -1,6 +1,9 @@
 
 $(document).ready(function() {
 
+	// WP FIXES
+
+	$(".wp-caption").removeAttr('style')
 
 	// MENU
 
