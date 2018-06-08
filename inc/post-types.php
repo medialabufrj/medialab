@@ -22,7 +22,7 @@
 					'hierarchical' => false,
 					'rewrite' => array('slug' => $type[2]),
 					'query_var' => true,
-					'supports' => array('title','editor','thumbnail'),
+					'supports' => $type[0] == 'Post' ? array('title','editor','thumbnail','comments') : array('title','editor','thumbnail'),
 					'taxonomies' => array('category','post_tag'),
 					'menu_position' => 5,
 					'has_archive' => true

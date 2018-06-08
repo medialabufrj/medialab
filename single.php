@@ -161,3 +161,7 @@
 
 </article>
 <?php endwhile; ?>
+
+<div class="spacer"></div>
+
+<?php comments_template(); ?> 
