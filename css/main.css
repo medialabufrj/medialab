@@ -6483,17 +6483,15 @@ h6 {
     .posts-pagination .nav-links a {
       margin: 0 20px; }
 
-.row.multi [class*='row__'] {
-  margin-right: 0;
-  padding: 5px;
-  box-sizing: border-box; }
-
-.row img {
-  max-width: 100%;
-  height: auto; }
-
 header {
+  padding-top: 50px;
   border-bottom: 1px solid #eee; }
+  header .header {
+    position: relative; }
+  header .header--marca {
+    position: absolute;
+    display: block;
+    top: -5px; }
 
 header .site-menu,
 header .site-categories {
@@ -6523,6 +6521,10 @@ header .site-categories {
   text-align: right; }
   header .site-categories .current-cat {
     text-decoration: underline; }
+
+#mobile_menu hr {
+  margin: 10px auto;
+  width: 50%; }
 
 footer {
   border-top: 1px solid #eee; }
@@ -6608,3 +6610,6 @@ footer {
 .eixos--projetos-link {
   text-align: center;
   margin: 40px 0; }
+
+.wp-caption-text {
+  font-size: 0.8em; }

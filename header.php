@@ -16,11 +16,13 @@
 
 <body <?php body_class(); ?>>
 
-	<header style="padding-top: 50px;" class="is-hidden-touch">
+	<header class="is-hidden-touch">
 
 		<div class="section-wrapper header">
 
-			<a href="<?php echo site_url(); ?>"><img src="<?php echo WP_THEME_URL ?>/img/medialab-marca.svg" alt="" style="position:absolute;top:40px;" width="128"></a>
+			<a href="<?php echo site_url(); ?>" class="header--marca">
+				<img src="<?php echo WP_THEME_URL ?>/img/medialab-marca.svg" width="128">
+			</a>
 			
 			<nav class="display site-menu">
 				<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>

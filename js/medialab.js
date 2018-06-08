@@ -21,7 +21,7 @@ $(document).ready(function() {
 		link.addClass('navbar-item')
 	})
 
-	mobile_menu.append('<hr style="margin: 10px 0;">')
+	mobile_menu.append('<hr>')
 
 	$(".site-categories a").each(function( index ) {
 		var link = $(this).clone().appendTo(mobile_menu)
