@@ -24,10 +24,12 @@ Template Name: Sobre
 		while ( have_rows('acf_equipe') ) : the_row();
 ?>
 		<div class="sobre-equipe--pessoa column is-4-tablet is-3-desktop">
-			<img src="<?php $img = get_sub_field('foto'); echo $img['url'] ?>">
-			<h3><?php the_sub_field('nome'); ?></h3>
-			<h4><?php the_sub_field('titulo'); ?></h4>
-			<!-- <p><?php the_sub_field('bio'); ?></p> -->
+			<a href="#" class="abrir-perfil">
+				<img class="foto" src="<?php $img = get_sub_field('foto'); echo $img['sizes']['square-medium'] ?>">
+				<h3 class="nome"><?php the_sub_field('nome'); ?></h3>
+				<h4 class="titulo"><?php the_sub_field('titulo'); ?></h4>
+				<span class="bio" style="display: none;"><?php the_sub_field('bio'); ?></span>
+			</a>
 		</div>
 			
 <?php
@@ -68,4 +70,24 @@ Template Name: Sobre
 
 <?php endwhile; ?>
 
+</div>
+
+<div class="modal modal-sobre">
+	<div class="modal-background"></div>
+	<div class="modal-card">
+		<section class="modal-card-body">
+				<div class="columns">
+					<div class="column is-narrow">
+						<img class="foto" src="#">
+					</div>
+					<div class="column content">
+						<h3 class="nome"></h3>
+						<h4 class="titulo"></h4>
+						<div class="texto"></div>
+					</div>
+				</div>
+		</section>	
+			
+	</div>
+	<button class="modal-close is-large" aria-label="close"></button>
 </div>
