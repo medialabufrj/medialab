@@ -61,6 +61,16 @@
 		var PATH = "<?php echo WP_SITE_URL ?>";
 	</script>
 
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-44330723-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-44330723-1');
+	</script>
+
 	<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore.js"></script> -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
 	<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.min.js"></script> -->
