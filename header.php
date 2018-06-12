@@ -29,20 +29,7 @@
 			</nav>
 			
 			<nav class="display site-categories is-hidden-touch">
-				<?php if(is_home() || is_page() || is_category() || is_single()): ?>
-					<?php wp_list_categories( array('title_li'=>'') ) ?>
-				<?php else: ?>
-					<!-- <li>FILTRAR: </li> -->
-					<?php
-					$query_object = get_queried_object();
-					$category_ids = get_all_category_ids(); 
-					$args = array( 'orderby' => 'slug', 'parent' => 0 ); 
-					$categories = get_categories( $args );
-					foreach ( $categories as $category ) {
-					$classname = isset($_GET['eixo']) && $_GET['eixo'] == $category->slug ? "current-cat" : "";
-					echo '<li><a class="'.$classname.'" href="?eixo=' . $category->slug . '">' . $category->name . '</a></li>'; }
-					?>
-				<?php endif; ?>
+				<?php wp_list_categories( array('title_li'=>'') ) ?>
 			</nav>
 
 		</div>
