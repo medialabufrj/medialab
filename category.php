@@ -1,7 +1,6 @@
 <?php $eixo = get_category(get_query_var('cat')); ?>
 
 <div class="eixos--description content">
-	<p><strong><?php the_field('acf_eixo_title', $eixo) ?></strong></p>
 	<p><?php echo $eixo->description ?></p>
 </div>
 
