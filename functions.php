@@ -28,7 +28,7 @@ include 'inc/posts2posts.php';
 // ADMIN MENU ORDER
 
 function medialab_custom_menu_order() {
-    return array( 'index.php', 'separator1', 'edit.php?post_type=page' );
+		return array( 'index.php', 'separator1', 'edit.php?post_type=page' );
 }
 
 add_filter( 'custom_menu_order', '__return_true' );
@@ -38,7 +38,7 @@ add_filter( 'menu_order', 'medialab_custom_menu_order' );
 // REGISTER MENU
 
 function register_main_menu() {
-  register_nav_menu('main-menu',__( 'Menu Principal' ));
+	register_nav_menu('main-menu',__( 'Menu Principal' ));
 }
 add_action( 'init', 'register_main_menu' );
 
@@ -96,47 +96,102 @@ function custom_query_vars( $query ) {
 // PAGINATION
 
 function bulma_pagination() {
-  global $wp_query;
-  $big = 999999999; //I trust StackOverflow.
-  $total_pages = $wp_query->max_num_pages; //you can set a custom int value to this var
-  $pages = paginate_links( array(
-    'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-    'format' => '?paged=%#%',
-    'current' => max( 1, get_query_var('paged') ),
-    'total' => $total_pages,
-    'prev_next' => false,
-    'type'  => 'array',
-    'prev_next'   => true,
-    'prev_text'    => 'Anterior',
-    'next_text'    => 'Próxima',
-  ) );
-  if ( is_array( $pages ) ) {
-  //Get current page
-    $paged = ( get_query_var('paged') == 0 ) ? 1 : get_query_var( 'paged' );
-  //Disable Previous button if the current page is the first one
-    if ($paged == 1) {
-      echo '<a class="pagination-previous" disabled>Anterior</a>';
-    } else {
-      echo '<a class="pagination-previous" href="' . get_previous_posts_page_link() . '">Anterior</a>';
-    }
-  //Disable Next button if the current page is the last one
-    if ($paged<$total_pages) {
-      echo '<a class="pagination-next" href="' . get_next_posts_page_link() . '">Próxima</a>
-      <ul class="pagination-list">';
-    } else {
-      echo '<a class="pagination-next" disabled>Próxima</a>
-      <ul class="pagination-list">';
-    }
-    for ($i=1; $i<=$total_pages; $i++) {
-      if ($i == $paged) {
-        echo '<li><a class="pagination-link is-current" href="' . get_pagenum_link($i) . '">' . $i . '</a></li>';
-      } else {
-        echo '<li><a class="pagination-link" href="'. get_pagenum_link($i) . '">' . $i . '</a></li>';
-      }
-    }
-    echo '</ul>';
-  }
+	global $wp_query;
+	$big = 999999999; //I trust StackOverflow.
+	$total_pages = $wp_query->max_num_pages; //you can set a custom int value to this var
+	$pages = paginate_links( array(
+		'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+		'format' => '?paged=%#%',
+		'current' => max( 1, get_query_var('paged') ),
+		'total' => $total_pages,
+		'prev_next' => false,
+		'type'  => 'array',
+		'prev_next'   => true,
+		'prev_text'    => 'Anterior',
+		'next_text'    => 'Próxima',
+	) );
+	if ( is_array( $pages ) ) {
+	//Get current page
+		$paged = ( get_query_var('paged') == 0 ) ? 1 : get_query_var( 'paged' );
+	//Disable Previous button if the current page is the first one
+		if ($paged == 1) {
+			echo '<a class="pagination-previous" disabled>Anterior</a>';
+		} else {
+			echo '<a class="pagination-previous" href="' . get_previous_posts_page_link() . '">Anterior</a>';
+		}
+	//Disable Next button if the current page is the last one
+		if ($paged<$total_pages) {
+			echo '<a class="pagination-next" href="' . get_next_posts_page_link() . '">Próxima</a>
+			<ul class="pagination-list">';
+		} else {
+			echo '<a class="pagination-next" disabled>Próxima</a>
+			<ul class="pagination-list">';
+		}
+		for ($i=1; $i<=$total_pages; $i++) {
+			if ($i == $paged) {
+				echo '<li><a class="pagination-link is-current" href="' . get_pagenum_link($i) . '">' . $i . '</a></li>';
+			} else {
+				echo '<li><a class="pagination-link" href="'. get_pagenum_link($i) . '">' . $i . '</a></li>';
+			}
+		}
+		echo '</ul>';
+	}
 }
+
+// FACEBOOK META
+
+//Adding the Open Graph in the Language Attributes
+function add_opengraph_doctype($output)
+{
+		return $output . ' xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml"';
+}
+
+add_filter('language_attributes', 'add_opengraph_doctype');
+
+//add Open Graph Meta Info
+function insert_fb_in_head()
+{
+		global $post;
+		if (!is_singular()) //if it is not a post or a page
+				return;
+
+		if ($excerpt = $post->post_excerpt)
+		{
+				$excerpt = strip_tags($post->post_excerpt);
+		}
+		else
+		{
+				$excerpt = get_bloginfo('description');
+		}
+
+		//echo '<meta property="fb:app_id" content="YOUR APPID"/>'; //<-- this is optional
+		echo '<meta property="og:title" content="' . get_the_title() . '"/>';
+		echo '<meta property="og:description" content="' . $excerpt . '"/>';
+		echo '<meta property="og:type" content="article"/>';
+		echo '<meta property="og:url" content="' . get_permalink() . '"/>';
+		echo '<meta property="og:site_name" content="' . get_bloginfo() . '"/>';
+
+		echo '<meta name="twitter:title" content="' . get_the_title() . '"/>';
+		echo '<meta name="twitter:card" content="summary" />';
+		echo '<meta name="twitter:description" content="' . $excerpt . '" />';
+		echo '<meta name="twitter:url" content="' . get_permalink() . '"/>';
+
+		if (!has_post_thumbnail($post->ID))
+		{
+				//the post does not have featured image, use a default image
+				//$default_image = "http://example.com/image.jpg"; //<--replace this with a default image on your server or an image in your media library
+				//echo '<meta property="og:image" content="' . $default_image . '"/>';
+				//echo '<meta name="twitter:image" content="' . $default_image . '"/>';
+		}
+		else
+		{
+				$thumbnail_src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large');
+				echo '<meta property="og:image" content="' . esc_attr($thumbnail_src[0]) . '"/>';
+				echo '<meta name="twitter:image" content="' . esc_attr($thumbnail_src[0]) . '"/>';
+		}
+}
+
+add_action('wp_head', 'insert_fb_in_head', 5);
 
 
 ?>
