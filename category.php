@@ -43,3 +43,95 @@
 	</div>
 
 </section>
+
+<div class="spacer"></div>
+
+<div class="columns">
+
+	<!-- BLOG -->
+
+	<div class="column eixos--blog content">
+
+		<h2 class="display upper">Blog</h2>
+
+		<div class="spacer"></div>
+
+		<?php 
+			$args = array ( 'category' => $eixo->cat_ID, 'posts_per_page' => 6, 'post_type' => 'blog');
+			$myposts = get_posts( $args );
+			foreach( $myposts as $post ) : 
+				setup_postdata($post);
+		?>
+			<article class="eixos--blog-post columns">
+				
+				<div class="column is-3">
+					<a href="<?php the_permalink(); ?>">
+						<?php the_post_thumbnail('square-small'); ?>
+					</a>
+				</div>
+				
+				<div class="column">
+					<h5>
+						<a href="<?php the_permalink(); ?>">
+							<?php the_title(); ?>
+						</a>
+					</h5>
+				</div>
+
+			</article>
+
+		<?php endforeach; ?>
+
+
+	</div>
+	
+	<div class="column is-1"></div>
+
+	<!-- Eventos -->
+
+	<div class="column eixos--eventos content">
+
+		<h2 class="display upper">Eventos</h2>
+
+		<div class="spacer"></div>
+
+		<?php 
+			$args = array ( 'category' => $eixo->cat_ID, 'posts_per_page' => 6, 'post_type' => 'eventos');
+			$myposts = get_posts( $args );
+			foreach( $myposts as $post ) : 
+				setup_postdata($post);
+		?>
+			<article class="eixos--evento columns">
+				
+				<div class="column is-3">
+					<a href="<?php the_permalink(); ?>">
+						<?php the_post_thumbnail('square-small'); ?>
+					</a>
+				</div>
+				
+				<div class="column">
+					<h5>
+						<a href="<?php the_permalink(); ?>">
+							<?php the_title(); ?>
+						</a>
+					</h5>
+				</div>
+
+			</article>
+
+		<?php endforeach; ?>
+
+
+	</div>
+
+</div>
+
+<div class="columns">
+	<div class="column">
+		<a class="display upper btn" href="/blog/?eixo=<?php echo $eixo->slug ?>">Ver todos os posts de <?php echo $eixo->name ?></a>
+	</div>
+	<div class="column is-1"></div>
+	<div class="column">
+		<a class="display upper btn" href="/eventos/?eixo=<?php echo $eixo->slug ?>">Ver todos os eventos de <?php echo $eixo->name ?></a>
+	</div>
+</div>
