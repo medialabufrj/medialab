@@ -269,3 +269,17 @@ footer {
 .wp-caption-text {
   font-size: 0.8em;
 }
+
+
+// MOBILE MENU
+
+#mobile_menu > div {
+  padding-bottom: 30px;
+}
+
+.site-search-mobile {
+  width: 80%;
+  max-width: 260px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}

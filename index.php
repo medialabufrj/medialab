@@ -1,3 +1,19 @@
+
+<?php if(is_search()): ?>
+
+    <div class="filter-title">
+        
+        <p class="display upper"><?php echo $wp_query->found_posts; ?>
+            Resultados para "<?php echo get_search_query(); ?>"
+        </p>
+        <!-- <a class="display upper btn" href="/<?php echo $query_object->name ?>">remover filtro</a> -->
+
+    </div>
+
+    <hr>
+
+<?php endif; ?>
+
 <section class="post-loop">
     
     <div class="content">

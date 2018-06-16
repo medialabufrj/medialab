@@ -7,7 +7,7 @@ $(document).ready(function() {
 
 	// MENU
 
-	var mobile_menu = $('#mobile_menu .navbar-end')
+	var mobile_menu = $('#mobile_menu > div')
 
 	$('.navbar-burger').click(function(e){
         var el = $(e.currentTarget)
@@ -15,6 +15,11 @@ $(document).ready(function() {
         el.toggleClass('is-active')
         target.toggleClass('is-active')
     })
+
+    $('<div class="site-search-mobile"></div>')
+    	.html($('.site-search').html())
+    	.appendTo(mobile_menu)
+    	.find('.input.is-small').removeClass('is-small')
 
 	$(".site-menu a").each(function( index ) {
 		var link = $(this).clone().appendTo(mobile_menu)
