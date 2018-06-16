@@ -6483,6 +6483,11 @@ h6 {
     .posts-pagination .nav-links a {
       margin: 0 20px; }
 
+.pagination-previous[disabled],
+.pagination-next[disabled],
+.pagination-link[disabled] {
+  background: none; }
+
 header {
   padding-top: 50px;
   border-bottom: 1px solid #eee; }
@@ -6521,6 +6526,11 @@ header .site-categories {
   text-align: right; }
   header .site-categories .current-cat {
     text-decoration: underline; }
+
+.navbar-brand img {
+  max-height: 72px;
+  margin-top: 20px;
+  margin-left: 15px; }
 
 #mobile_menu hr {
   margin: 10px auto;
@@ -6620,5 +6630,8 @@ footer {
 .site-search-mobile {
   width: 80%;
   max-width: 260px;
-  margin: 0 auto;
-  margin-bottom: 30px; }
+  margin: 15px auto; }
+
+.navbar-burger {
+  top: 28px;
+  right: 10px; }

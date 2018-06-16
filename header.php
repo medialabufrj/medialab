@@ -45,7 +45,7 @@
 	<nav class="navbar is-transparent is-hidden-desktop">
 		<div class="navbar-brand">
 			<a class="navbar-item" href="<?php echo site_url(); ?>">
-				<img src="<?php echo WP_THEME_URL ?>/img/medialab-marca.svg" style="max-height: 92px;margin-left: 25px;">
+				<img src="<?php echo WP_THEME_URL ?>/img/medialab-marca.svg">
 			</a>
 			<div class="navbar-burger burger" data-target="mobile_menu">
 				<span></span>

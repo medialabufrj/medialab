@@ -71,6 +71,11 @@ h1, h2, h3, h4, h5, h6 {
   
 }
 
+.pagination-previous[disabled],
+.pagination-next[disabled],
+.pagination-link[disabled] {
+  background: none;
+}
 
 // HEADER
 
@@ -124,6 +129,14 @@ header .site-categories {
     .current-cat {
       text-decoration: underline;
     }
+}
+
+.navbar-brand {
+  img {
+    max-height: 72px;
+    margin-top: 20px;
+    margin-left: 15px;
+  }
 }
 
 #mobile_menu hr {
@@ -280,6 +293,10 @@ footer {
 .site-search-mobile {
   width: 80%;
   max-width: 260px;
-  margin: 0 auto;
-  margin-bottom: 30px;
+  margin: 15px auto;
+}
+
+.navbar-burger {
+  top: 28px;
+  right: 10px;
 }
