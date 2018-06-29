@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title><?php wp_title(); ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<!-- <link rel="icon" href="<?php echo WP_THEME_URL ?>/img/favicon.ico" /> -->
+	<link rel="icon" href="<?php echo WP_THEME_URL ?>/img/favicon.ico">
 	
 	<link href="https://fonts.googleapis.com/css?family=Rajdhani:300,500,700|Source+Sans+Pro:300,300i,600,600i" rel="stylesheet">
 	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
