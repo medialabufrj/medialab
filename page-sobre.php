@@ -43,6 +43,63 @@ Template Name: Sobre
 
 	<hr>
 
+
+	<h2 class="display upper">Iniciação Científica</h2>
+	
+	<div class="sobre-equipe columns is-multiline is-mobile">
+<?php
+
+	if( have_rows('acf_bolsistas') ):
+
+		while ( have_rows('acf_bolsistas') ) : the_row();
+?>
+		<div class="sobre-equipe--pessoa column is-6-mobile is-3-tablet is-2-desktop">
+			<a href="#" class="abrir-perfil">
+				<img class="foto" src="<?php $img = get_sub_field('foto'); echo $img['sizes']['square-small'] ?>">
+				<h5 class="nome"><?php the_sub_field('nome'); ?></h5>
+				<span class="bio" style="display: none;"><?php the_sub_field('bio'); ?></span>
+			</a>
+		</div>
+			
+<?php
+		endwhile;
+
+	endif;
+
+?>
+
+	</div>
+
+	<hr>
+
+
+	<h2 class="display upper">Pesquisadores Colaboradores</h2>
+	
+	<div class="sobre-equipe columns is-multiline is-mobile">
+<?php
+
+	if( have_rows('acf_colaboradores') ):
+
+		while ( have_rows('acf_colaboradores') ) : the_row();
+?>
+		<div class="sobre-equipe--pessoa column is-6-mobile is-3-tablet is-2-desktop">
+			<a href="#" class="abrir-perfil">
+				<img class="foto" src="<?php $img = get_sub_field('foto'); echo $img['sizes']['square-small'] ?>">
+				<h5 class="nome"><?php the_sub_field('nome'); ?></h5>
+				<span class="bio" style="display: none;"><?php the_sub_field('bio'); ?></span>
+			</a>
+		</div>
+			
+<?php
+		endwhile;
+
+	endif;
+
+?>
+
+	</div>
+
+	<hr>
 	<h2 class="display upper">Parceiros</h2>
 	
 	<div class="sobre-parceiros columns is-multiline">
