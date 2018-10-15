@@ -2,6 +2,8 @@
 
 <div class="eixos--description content">
 	<p><?php echo $eixo->description ?></p>
+	<hr style="margin: 20px 0;opacity: 0.5;">
+	<small><?php the_field('acf_eixo_english', $eixo); ?></small>
 </div>
 
 <hr>
