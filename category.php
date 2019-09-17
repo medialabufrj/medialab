@@ -73,11 +73,12 @@
 				</div>
 				
 				<div class="column">
-					<h5>
+					<h5 style="margin-bottom: 0.1em;">
 						<a href="<?php the_permalink(); ?>">
 							<?php the_title(); ?>
 						</a>
 					</h5>
+					<small><?php the_date(); ?></small>
 				</div>
 
 			</article>

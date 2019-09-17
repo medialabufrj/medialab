@@ -34,7 +34,8 @@
 
 				<div class="column is-6">
 					<div class="destaque-info">
-						<h3><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h3>
+						<h3 style="margin-bottom: 0.1em;"><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h3>
+						<small style="display: block; margin-bottom: 1em;"><?php the_date(); ?></small>
 						<p><?php echo wp_trim_words(strip_shortcodes(get_the_content()), 60); ?></p>
 						<p><a href="<?php the_permalink(); ?>">Leia mais</a></p>
 					</div>

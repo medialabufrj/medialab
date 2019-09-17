@@ -1,6 +1,7 @@
 <?php while(have_posts()): the_post(); ?>
 <article class="content">
     <h1><?php the_title() ?></h1>
+    <small style="display: block; margin-bottom: 3em;"><?php the_date(); ?></small>
     <?php the_content() ?>
 
     <hr>
@@ -45,7 +46,7 @@
             <h3>Posts relacionados</h3>
             <ul>
             <?php while ( $connected->have_posts() ) : $connected->the_post(); ?>
-                <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><br><small><?php the_date(); ?></small></li>
             <?php endwhile; ?>
             </ul>
         </div>
@@ -97,7 +98,7 @@
             <h3>Posts relacionados</h3>
             <ul>
             <?php while ( $connected->have_posts() ) : $connected->the_post(); ?>
-                <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><br><small><?php echo 'date'; the_date(); ?></small></li>
             <?php endwhile; ?>
             </ul>
         </div>
