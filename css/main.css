@@ -6621,6 +6621,11 @@ footer {
   text-align: center;
   margin: 40px 0; }
 
+.content a {
+  text-decoration: underline; }
+  .content a:hover {
+    opacity: 0.6; }
+
 .wp-caption-text {
   font-size: 0.8em; }
 

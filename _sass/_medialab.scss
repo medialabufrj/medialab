@@ -276,6 +276,16 @@ footer {
   //text-align: center;
 }
 
+// CONTENT
+
+.content a {
+  text-decoration: underline;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
 
 // EDITOR
 
